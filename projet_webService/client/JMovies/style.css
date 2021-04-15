@@ -1,0 +1,105 @@
+:root{
+	--contrast-color: white;
+	--background-color: #eeeeee;
+	--transition-slow: 1s ease-in-out;
+	--opacity-transition: opacity 1s ease;
+	--transition-change-color: color 1s ease;
+
+
+	--color-gradient-background-1:  #0D324D;
+    --color-gradient-background-2:#7F5A83;
+    --glow-color: #03e9f4;
+}
+body{
+     background:linear-gradient(to right,  var(--color-gradient-background-1), var(--color-gradient-background-2));
+}
+h1{
+    text-align: center;
+	Color: burlywood;
+}
+.link{
+	text-align : center;
+}
+a:hover{
+    color: burlywood;
+}
+a{
+    text-decoration: none;
+	color : #7F5A83
+}
+
+.inscription{
+	text-align : center;
+	border : 1px solid;
+	border-left :1px solid;
+	border-color : white;
+}
+
+.inscription  form label{
+	color : burlywood;
+}
+
+.error{
+	color : red;
+	text-align : center;
+}
+
+.review {
+	text-align : center;
+}
+
+.review form label{
+	text-align : center;
+	color : burlywood;
+}
+
+footer{
+	text-align : center;
+	Color: burlywood;
+}
+p{
+	text-align : center;
+	Color: burlywood;
+}
+#link{
+	text-align : center;
+}
+h2{
+	text-align : center;
+	Color: burlywood;
+}
+
+h3{
+	text-align : center;
+	Color: burlywood;
+}
+
+.table{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+.table td{
+	border : 1px solid;
+	padding : 5px;
+	Color: burlywood;
+}
+
+.not_found_message{
+	Color : #009ba0;
+	text-align : center;
+}
+
+.movie_table{
+	text-align : center;
+	Color: burlywood;
+}
+
+.movie_table td{
+	border : 1px solid;
+}
+
+.methodMessage{
+	text-align : center;
+	color : #0004ff;
+}

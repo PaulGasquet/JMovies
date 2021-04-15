@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://service.jMoviesWebSoap.webServices.project.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://service.jMoviesWebSoap.webServices.project.com/" version="1.0">
+<xs:element name="CreateUser" type="tns:CreateUser"/>
+<xs:element name="CreateUserResponse" type="tns:CreateUserResponse"/>
+<xs:element name="addReviews" type="tns:addReviews"/>
+<xs:element name="addReviewsResponse" type="tns:addReviewsResponse"/>
+<xs:element name="getAllReviews" type="tns:getAllReviews"/>
+<xs:element name="getAllReviewsResponse" type="tns:getAllReviewsResponse"/>
+<xs:element name="getAllUser" type="tns:getAllUser"/>
+<xs:element name="getAllUserResponse" type="tns:getAllUserResponse"/>
+<xs:element name="getBestReviews" type="tns:getBestReviews"/>
+<xs:element name="getBestReviewsResponse" type="tns:getBestReviewsResponse"/>
+<xs:element name="getUser" type="tns:getUser"/>
+<xs:element name="getUserResponse" type="tns:getUserResponse"/>
+<xs:element name="getWorstReviews" type="tns:getWorstReviews"/>
+<xs:element name="getWorstReviewsResponse" type="tns:getWorstReviewsResponse"/>
+<xs:element name="review" type="tns:review"/>
+<xs:element name="user" type="tns:user"/>
+<xs:complexType name="getWorstReviews">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getWorstReviewsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:review"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="review">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mark" type="xs:string"/>
+      <xs:element minOccurs="0" name="movieTitle" type="xs:string"/>
+      <xs:element minOccurs="0" name="reviewContent" type="xs:string"/>
+      <xs:element name="reviewId" type="xs:int"/>
+      <xs:element name="user_id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addReviews">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:review"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addReviewsResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getUser">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getUserResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:user"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="user">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="preference" type="xs:string"/>
+      <xs:element minOccurs="0" name="userName" type="xs:string"/>
+      <xs:element name="user_id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="CreateUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:user"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="CreateUserResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getAllUser">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getAllUserResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:user"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllReviews">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllReviewsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:review"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getBestReviews">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getBestReviewsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:review"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

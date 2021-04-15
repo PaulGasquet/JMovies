@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="UserServiceImplService" targetNamespace="http://service.jMoviesWebSoap.webServices.project.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.jMoviesWebSoap.webServices.project.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://service.jMoviesWebSoap.webServices.project.com/" schemaLocation="userserviceimpl_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getUserResponse">
+    <wsdl:part name="parameters" element="tns:getUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getWorstReviews">
+    <wsdl:part name="parameters" element="tns:getWorstReviews">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUser">
+    <wsdl:part name="parameters" element="tns:getUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreateUser">
+    <wsdl:part name="parameters" element="tns:CreateUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addReviewsResponse">
+    <wsdl:part name="parameters" element="tns:addReviewsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getWorstReviewsResponse">
+    <wsdl:part name="parameters" element="tns:getWorstReviewsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllReviews">
+    <wsdl:part name="parameters" element="tns:getAllReviews">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBestReviews">
+    <wsdl:part name="parameters" element="tns:getBestReviews">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllUserResponse">
+    <wsdl:part name="parameters" element="tns:getAllUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBestReviewsResponse">
+    <wsdl:part name="parameters" element="tns:getBestReviewsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addReviews">
+    <wsdl:part name="parameters" element="tns:addReviews">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllUser">
+    <wsdl:part name="parameters" element="tns:getAllUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreateUserResponse">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllReviewsResponse">
+    <wsdl:part name="parameters" element="tns:getAllReviewsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="UserService">
+    <wsdl:operation name="getWorstReviews">
+      <wsdl:input name="getWorstReviews" message="tns:getWorstReviews">
+    </wsdl:input>
+      <wsdl:output name="getWorstReviewsResponse" message="tns:getWorstReviewsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addReviews">
+      <wsdl:input name="addReviews" message="tns:addReviews">
+    </wsdl:input>
+      <wsdl:output name="addReviewsResponse" message="tns:addReviewsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <wsdl:input name="getUser" message="tns:getUser">
+    </wsdl:input>
+      <wsdl:output name="getUserResponse" message="tns:getUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input name="CreateUser" message="tns:CreateUser">
+    </wsdl:input>
+      <wsdl:output name="CreateUserResponse" message="tns:CreateUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllUser">
+      <wsdl:input name="getAllUser" message="tns:getAllUser">
+    </wsdl:input>
+      <wsdl:output name="getAllUserResponse" message="tns:getAllUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllReviews">
+      <wsdl:input name="getAllReviews" message="tns:getAllReviews">
+    </wsdl:input>
+      <wsdl:output name="getAllReviewsResponse" message="tns:getAllReviewsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBestReviews">
+      <wsdl:input name="getBestReviews" message="tns:getBestReviews">
+    </wsdl:input>
+      <wsdl:output name="getBestReviewsResponse" message="tns:getBestReviewsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserServiceImplServiceSoapBinding" type="tns:UserService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getWorstReviews">
+      <soap:operation soapAction="urn:GetWorstReviews" style="document"/>
+      <wsdl:input name="getWorstReviews">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getWorstReviewsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addReviews">
+      <soap:operation soapAction="urn:AddReviews" style="document"/>
+      <wsdl:input name="addReviews">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addReviewsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap:operation soapAction="urn:GetUser" style="document"/>
+      <wsdl:input name="getUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="urn:CreateUser" style="document"/>
+      <wsdl:input name="CreateUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllUser">
+      <soap:operation soapAction="urn:GetAllUser" style="document"/>
+      <wsdl:input name="getAllUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAllUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllReviews">
+      <soap:operation soapAction="urn:GetAllReviews" style="document"/>
+      <wsdl:input name="getAllReviews">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAllReviewsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBestReviews">
+      <soap:operation soapAction="urn:GetBestReviews" style="document"/>
+      <wsdl:input name="getBestReviews">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBestReviewsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserServiceImplService">
+    <wsdl:port name="UserServiceImplPort" binding="tns:UserServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost:8080/JMoviesWebSoap/services/UserServiceImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
