@@ -7,7 +7,6 @@ import java.sql.DriverManager;
 /**
  * Point of connection with the data source which using the postgreSql RDBMS.
  * 
- * @author Paul
  * @version 1.0
  *
  */
